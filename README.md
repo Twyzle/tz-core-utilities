@@ -19,13 +19,13 @@ A lightweight utility toolkit built for modern TypeScript projects. This library
 ## 📦 Installation
 
 ```bash
-npm install @your-scope/core-utils
+npm install @twyzle/core-utils
 ```
 
 or
 
 ```bash
-pnpm add @your-scope/core-utils
+pnpm add @twyzle/core-utils
 ```
 
 ---
@@ -33,7 +33,7 @@ pnpm add @your-scope/core-utils
 ## 🚀 Usage
 
 ```ts
-import { camelizeObject, safeClone, buildFormData } from '@your-scope/core-utils'
+import { camelizeObject, safeClone, buildFormData } from '@twyzle/core-utils'
 
 const raw = { first_name: 'John', last_name: 'Doe' }
 const camelized = camelizeObject(raw)

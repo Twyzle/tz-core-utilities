@@ -24,5 +24,15 @@
     "@types/lodash-es": "^4.17.12",
     "typescript": "^5.0.0"
   },
-  "private": true
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twyzle/tz-core-utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Twyzle/tz-core-utilities/issues"
+  },
+  "homepage": "https://github.com/Twyzle/tz-core-utilities#readme"
 }
