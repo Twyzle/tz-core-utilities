@@ -1,5 +1,5 @@
 {
-  "name": "@twyzle/tz-core-utilities",
+  "name": "@twyzle/core-utils",
   "version": "1.0.0",
   "description": "Typed utility functions for web apps",
   "main": "dist/index.js",
