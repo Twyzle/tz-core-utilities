@@ -1,5 +1,9 @@
 # 🛠️ Twyzle TypeScript Core Utilities
 
+[![npm version](https://img.shields.io/npm/v/@twyzle/core-utils)](https://www.npmjs.com/package/@twyzle/core-utils)
+[![npm downloads](https://img.shields.io/npm/dm/@twyzle/core-utils)](https://www.npmjs.com/package/@twyzle/core-utils)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A lightweight utility toolkit built for modern TypeScript projects. This library provides reusable, typed helpers for manipulating objects, arrays, forms, strings, and more. Powered by [Lodash](https://lodash.com/) for consistent, reliable performance.
 
 ---
