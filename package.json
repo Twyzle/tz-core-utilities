@@ -1,0 +1,28 @@
+{
+  "name": "@twyzle/tz-core-utilities",
+  "version": "1.0.0",
+  "description": "Typed utility functions for web apps",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "utils",
+    "typescript",
+    "lodash",
+    "helpers"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "typescript": "^5.0.0"
+  },
+  "private": true
+}
