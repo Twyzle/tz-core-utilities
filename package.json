@@ -2,9 +2,15 @@
   "name": "@twyzle/core-utils",
   "version": "1.0.2",
   "description": "Typed utility functions for web apps",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -14,11 +20,23 @@
     "lodash",
     "helpers"
   ],
-  "author": "Your Name",
+  "author": "Twyzle, LLC. <support@twyzle.com> (https://twyzle.com)",
+  "contributors": [
+    "Ze Roi Minou <irving@lozarate.com>",
+    "Twyzle Team"
+  ],
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21"
+  },
+  "peerDependenciesMeta": {
+    "lodash": {
+      "optional": true
+    },
+    "lodash-es": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
