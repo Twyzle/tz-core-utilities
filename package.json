@@ -1,6 +1,6 @@
 {
   "name": "@twyzle/core-utils",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Typed utility functions for web apps",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
