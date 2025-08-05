@@ -10,13 +10,15 @@ A lightweight utility toolkit built for modern TypeScript projects. This library
 
 ## ✨ Features
 
-* 🖁️ Deep cloning and safe copies
+* 🔁️ Deep cloning and safe copies
 * 🧱 Object/array transformation helpers
 * 📄 Form data serialization
 * 🌤️ String normalization and ID generation
 * 🧪 Shallow diffing (`getTopLevelChanges`)
 * ✅ Branded types like `PositiveInt`
-* ⚙️ Tree-shakable when using `lodash-es`
+* ⚙️ Tree-shakable with `lodash-es` by default
+* 📦 Dual ESM + CommonJS output
+* 🧹 Consumer-controlled lodash variant (via alias or peer install)
 
 ---
 
@@ -26,10 +28,18 @@ A lightweight utility toolkit built for modern TypeScript projects. This library
 npm install @twyzle/core-utils
 ```
 
-or
+Then also install a lodash flavor based on your setup:
+
+### 🖐 ESM (tree-shakable):
 
 ```bash
-pnpm add @twyzle/core-utils
+npm install lodash-es
+```
+
+### 🖐 CommonJS:
+
+```bash
+npm install lodash
 ```
 
 ---
@@ -44,7 +54,7 @@ const camelized = camelizeObject(raw)
 // { firstName: 'John', lastName: 'Doe' }
 
 const cloned = safeClone(camelized)
-// Deep copies the object safely
+// Shallow clones the object safely
 
 const formData = new FormData()
 buildFormData(formData, camelized)
@@ -76,10 +86,25 @@ Prepends an item while enforcing uniqueness, prefix constraints, and a max lengt
 
 ---
 
+## ⚙️ Build Output
+
+This package includes dual module support:
+
+| Format   | Path              | Use case        |
+| -------- | ----------------- | --------------- |
+| ESM      | `dist/index.mjs`  | Modern bundlers |
+| CommonJS | `dist/index.cjs`  | Node.js, CJS    |
+| Types    | `dist/index.d.ts` | TypeScript apps |
+
+Consumers can alias `lodash-es` to `lodash` during build if needed.
+
+---
+
 ## ⚠️ Requirements
 
 * TypeScript 4.5+
-* Modern bundler (for ESM/`lodash-es` support if enabled)
+* Node 14+
+* A bundler that supports dual ESM/CJS (`vite`, `webpack`, etc.)
 
 ---
 
@@ -87,8 +112,14 @@ Prepends an item while enforcing uniqueness, prefix constraints, and a max lengt
 
 ```
 src/
-  index.ts         # Main exports
-  [optional]: utilities/arrays.ts, objects.ts, strings.ts, etc.
+  arrays/              # Array utilities
+  dom/                 # DOM-specific helpers
+  form/                # FormData utilities
+  objects/             # Object transformation/deep utils
+  strings/             # String utilities
+  types/               # Shared branded types like PositiveInt
+  index.ts             # Barrel exports
+tsup.config.ts         # Dual ESM + CJS build config
 ```
 
 ---
