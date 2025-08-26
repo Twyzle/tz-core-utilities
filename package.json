@@ -26,17 +26,9 @@
     "Twyzle Team"
   ],
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21"
-  },
-  "peerDependenciesMeta": {
-    "lodash": {
-      "optional": true
-    },
-    "lodash-es": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
