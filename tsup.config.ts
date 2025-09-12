@@ -9,6 +9,7 @@ export default defineConfig([
     clean: true,
     outExtension: () => ({ js: '.mjs' }),
     external: ['lodash-es'],
+    onSuccess: 'node post-build.js',
   },
   {
     entry: ['src/index.ts'],
