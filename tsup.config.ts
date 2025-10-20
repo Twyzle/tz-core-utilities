@@ -14,6 +14,7 @@ export default defineConfig([
   {
     entry: ['src/index.ts'],
     format: 'cjs',
+    dts: true,
     splitting: false,
     clean: false,
     outExtension: () => ({ js: '.cjs' }),
